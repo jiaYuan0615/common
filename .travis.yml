@@ -1,0 +1,11 @@
+# Only Support GitHub
+# Setting using languarge
+language: node_js
+# Setting execute version
+node_js:
+  - '9'
+  - '8'
+  - '7'
+  - '6'
+
+after_success: npm run coverage
