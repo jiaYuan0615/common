@@ -1,0 +1,43 @@
+{
+  "name": "jyz-common-library",
+  "version": "1.0.0",
+  "description": "common library",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "mocha -r esm test/*.test.js",
+    "build": "webpack",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiaYuan0615/common.git"
+  },
+  "keywords": [
+    "common",
+    "library"
+  ],
+  "author": "JiaYuan Zhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jiaYuan0615/common/issues"
+  },
+  "homepage": "https://github.com/jiaYuan0615/common#readme",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "chai": "^4.3.6",
+    "eslint": "^8.15.0",
+    "eslint-plugin-import": "^2.26.0",
+    "esm": "^3.2.25",
+    "mocha": "^5.2.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
