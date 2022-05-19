@@ -5,7 +5,7 @@ name: CI
 
 on:
   push:
-    branches: feature
+    branches: main
 
 jobs:
   UnitTest:

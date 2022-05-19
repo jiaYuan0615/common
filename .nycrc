@@ -4,5 +4,11 @@
   ],
   "exclude": [
     "**/*.test.js"
+  ],
+  "reporter":[
+    "html",
+    "lcov",
+    "text",
+    "text-summary"
   ]
 }
