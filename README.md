@@ -1,3 +1,4 @@
+[![CI](https://github.com/jiaYuan0615/common/actions/workflows/node.js.yml/badge.svg)](https://github.com/jiaYuan0615/common/actions/workflows/node.js.yml)
 [![Coverage Status](https://coveralls.io/repos/github/jiaYuan0615/common/badge.svg?branch=main)](https://coveralls.io/github/jiaYuan0615/common?branch=main)
 
 # common
