@@ -22,3 +22,5 @@ jobs:
         run: npm install
       - name: Testing
         run: npm run nyc
+      - name: Update Coverage
+        run: npm run coverage
