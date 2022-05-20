@@ -21,7 +21,6 @@ module.exports = {
     alias: {
       src: path.resolve(__dirname, "./src"),
       lodash: path.resolve(__dirname, "./node_modules/lodash"),
-      uuid: path.resolve(__dirname, "./node_modules/uuid")
     },
   },
 };

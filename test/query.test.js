@@ -1,5 +1,4 @@
 import { equal } from 'assert';
-import { v4 as uuid } from 'uuid';
 import { insertQuery, insertMultipleQuery, updateQuery, deleteQuery, deleteMultipleQuery } from '../src/query'
 
 describe('資料庫指令', () => {
@@ -8,24 +7,26 @@ describe('資料庫指令', () => {
       "email": "test@email.com",
       "password": "password"
     }
-    const expected = 'INSERT INTO users (id, email, password) VALUES (?, ?, ?)';
-    const { sql: actual } = insertQuery("users", payload);
+    const expected = 'INSERT INTO users (email, password) VALUES (?, ?)';
+    const actual = insertQuery("users", payload);
     equal(actual, expected);
   })
 
   it('回傳新增多筆指令', () => {
     const payload = [
       {
+        "id": "1",
         "email": "test@test.com",
         "password": "password"
       },
       {
+        "id": "1",
         "email": "test@test.com",
         "password": "password"
       }
     ]
     const expected = 'INSERT INTO users (id, email, password) VALUES (?, ?, ?), (?, ?, ?)';
-    const { sql: actual } = insertMultipleQuery("users", payload);
+    const actual = insertMultipleQuery("users", payload);
     equal(actual, expected);
   })
 
@@ -34,9 +35,8 @@ describe('資料庫指令', () => {
       "email": "test@test.com",
       "password": "password"
     }
-    const primaryKey = uuid();
     const expected = 'UPDATE users SET email=?, password=? WHERE id = ?'
-    const { sql: actual } = updateQuery("users", payload, primaryKey)
+    const actual = updateQuery("users", payload)
     equal(actual, expected)
   })
 

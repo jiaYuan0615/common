@@ -1,6 +1,6 @@
 {
   "name": "jyz-common-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "common library",
   "main": "./lib/index.js",
   "scripts": {
@@ -24,8 +24,7 @@
   },
   "homepage": "https://github.com/jiaYuan0615/common#readme",
   "dependencies": {
-    "lodash": "^4.17.21",
-    "uuid": "^8.3.2"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
