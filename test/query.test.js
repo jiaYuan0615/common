@@ -40,6 +40,15 @@ describe('資料庫指令', () => {
     equal(actual, expected)
   })
 
+  it('回傳更新指令使用自訂鍵值', () => {
+    const payload = {
+      "password": "password"
+    }
+    const expected = 'UPDATE users SET password=? WHERE userId = ?'
+    const actual = updateQuery("users", payload, "userId")
+    equal(actual, expected)
+  })
+
   it('回傳刪除單筆指令', () => {
     const expectd = 'DELETE FROM users WHERE id = ?';
     const actual = deleteQuery("users")
